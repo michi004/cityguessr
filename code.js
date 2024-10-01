@@ -41,6 +41,12 @@ function readValue() {
             return new City(name, population, {lat: parseFloat(lat), lng: parseFloat(lng)});
         });
 
+        if (citiesData.length > 0) {
+            // Set the view to the largest city's coordinates
+            console.log("zoom");
+            map.setView([citiesData[0].latlng.lat, citiesData[0].latlng.lng], 7); // Zoom-Level 10 ist ein guter Startpunkt, kann angepasst werden
+        }
+
         currentCity = citiesData[Math.floor(Math.random() * cities.length)];
         document.getElementById("curCity").innerHTML = currentCity.name;
         filterCitiesWithin10km(citiesData);
@@ -70,7 +76,6 @@ function filterCitiesWithin10km(cities) {
         for (let j = i + 1; j < cities.length; j++) {
             const city1 = cities[i];
             const city2 = cities[j];
-            console.log(city1.name, city2.name);
             const d = distance(
                 city1.latlng.lat,
                 city1.latlng.lng,
