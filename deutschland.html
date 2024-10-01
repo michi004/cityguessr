@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutschland</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</head>
+<body>
+    <div id="dropDownCountrySelect">
+        <select class="select">
+            <option>Europe</option>
+            <optgroup label="European Countries">
+                <option value="DEU">Germany (DEU)</option>
+                <option value="CHN">China (DEU)</option>
+                <option value="FRA">France (FRA)</option>
+                <option value="ITA">Italy (ITA)</option>
+                <option value="ESP">Spain (ESP)</option>
+                <option value="UKR">Ukraine (UKR)</option>
+                <option value="CHE">Switzerland (CHE)</option>
+                <option value="AUT">Austria (AUT)</option>
+                <option value="BEL">Belgium (BEL)</option>
+                <option value="BGR">Bulgaria (BGR)</option>
+                <option value="HRV">Croatia (HRV)</option>
+                <option value="CYP">Cyprus (CYP)</option>
+                <option value="CZE">Czechia (CZE)</option>
+                <option value="DNK">Denmark (DNK)</option>
+                <option value="EST">Estonia (EST)</option>
+                <option value="FIN">Finland (FIN)</option>
+                <option value="GRC">Greece (GRC)</option>
+                <option value="HUN">Hungary (HUN)</option>
+                <option value="IRL">Ireland (IRL)</option>
+                <option value="LVA">Latvia (LVA)</option>
+                <option value="LTU">Lithuania (LTU)</option>
+                <option value="LUX">Luxembourg (LUX)</option>
+                <option value="MLT">Malta (MLT)</option>
+                <option value="NLD">Netherlands (NLD)</option>
+                <option value="POL">Poland (POL)</option>
+                <option value="PRT">Portugal (PRT)</option>
+                <option value="ROU">Romania (ROU)</option>
+                <option value="SVK">Slovakia (SVK)</option>
+                <option value="SVN">Slovenia (SVN)</option>
+                <option value="SWE">Sweden (SWE)</option>">
+                <option value="ALB">Albania (ALB)</option>
+                <option value="AND">Andorra (AND)</option>
+                <option value="ARM">Armenia (ARM)</option>
+                <option value="AZE">Azerbaijan (AZE)</option>
+                <option value="BLR">Belarus (BLR)</option>
+                <option value="BIH">Bosnia and Herzegovina (BIH)</option>
+                <option value="GEO">Georgia (GEO)</option>
+                <option value="ISL">Iceland (ISL)</option>
+                <option value="KOS">Kosovo (KOS)</option>
+                <option value="LIE">Liechtenstein (LIE)</option>
+                <option value="MKD">North Macedonia (MKD)</option>
+                <option value="MDA">Moldova (MDA)</option>
+                <option value="MCO">Monaco (MCO)</option>
+                <option value="MNE">Montenegro (MNE)</option>
+                <option value="NOR">Norway (NOR)</option>
+                <option value="RUS">Russia (RUS)</option>
+                <option value="SMR">San Marino (SMR)</option>
+                <option value="SRB">Serbia (SRB)</option>
+                <option value="TUR">Turkey (TUR)</option>
+                <option value="UK">United Kingdom (UK)</option>
+                <option value="VAT">Vatican City (VAT)</option>
+                <option value=“USA”>Vereinigte Staaten</option> 
+                <option value=“CAN”>Kanada</option> 
+                <option value=“MEX”>Mexiko</option>
+                <option value=“BLZ”>Belize</option> 
+                <option value=“CRI”>Costa Rica</option> 
+                <option value=“SLV”>El Salvador</option> 
+                <option value=“GTM”>Guatemala</option> 
+                <option value=“HND”>Honduras</option> 
+                <option value=“NIC”>Nicaragua</option> 
+                <option value=“PAN”>Panama</option> 
+                <option value=“ARG”>Argentinien</option> 
+                <option value=“BOL”>Bolivien</option> 
+                <option value=“BRA”>Brasilien</option> 
+                <option value=“CHL”>Chile</option> 
+                <option value=“COL”>Kolumbien</option> 
+                <option value=“ECU”>Ecuador</option> 
+                <option value=“GUY”>Guyana</option> 
+                <option value=“PRY”>Paraguay</option> 
+                <option value=“PER”>Peru</option> 
+                <option value=“SUR”>Suriname</option> 
+                <option value=“URY”>Uruguay</option> 
+                <option value=“VEN”>Venezuela</option>
+            </optgroup>
+        </select> 
+        <form>
+            <input type="number" id="numberInput" name="numberInput" min="0" max="500" step="1">
+        </form>
+
+        <button class="button" onclick="readValue()">Start</button>
+    </div>
+      
+    <div id="curCity"></div>
+    <div id="map"></div>
+</body>
+</html>
+<script src="code.js"></script>
